@@ -35,7 +35,10 @@ var quotes = [{
 
 // function to select and return quote object randomly from quotes array 
 function getRandomQuote() {
-
+    // quotes array's index is length - 1, so Math.floor * quotes.length ensures 
+    // a number between 0 and quotes.length - 1.
+    var randNum = Math.floor(Math.random() * quotes.length);
+    return quotes[randNum];
 }
 
 // function to print a random quote to the document
