@@ -7,7 +7,7 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 // quotations sourced from "Familiar Quotations" by John Bartlett, 1968 edition, available online
 // at https://archive.org/details/familiarquotatio017007mbp
 var quotes = [{
-        quote: 'To different minds, the same world is a hell, and a heaven',
+        quote: 'To different minds, the same world is a hell, and a heaven.',
         source: 'Ralph Waldo Emerson',
         citation: 'Journal',
         year: '1822',
@@ -30,6 +30,13 @@ var quotes = [{
         citation: 'Letters',
         year: '1746',
         bartlettPage: '415'
+    },
+    {
+        quote: 'I have thought too much to stoop to action.',
+        source: 'Philippe Auguste Villiers De L\'Isle-Adam',
+        citation: 'Axel',
+        year: '1890',
+        bartlettPage: '780'
     }
 ];
 
@@ -47,8 +54,18 @@ function getRandomQuote() {
 function printQuote() {
     var quote = getRandomQuote();
 
-    // place holder quote for test purposes
-    quoteHTML = '<p class="quote"> placeholderquote </p>';
+    // prepare the HTML string
+    quoteHTML = '<p class="quote"> ' + quote.quote + '</p>';
+    quoteHTML += '<p class="source"> ' + quote.source;
+    // check to see if there is a citation added for this specific quote
+    if ('citation' in quote) {
+        quoteHTML += '<span class="citation"> ' + quote.citation + '<span>';
+    }
+    // check to see if there is a year added for this specific quote
+    if ('year' in quote) {
+        quoteHTML += '<span class="year"> ' + quote.year + '<span>';
+    }
+    quoteHTML += '</p>';
 
     // display on web page
     document.getElementById('quote-box').innerHTML = quoteHTML;
