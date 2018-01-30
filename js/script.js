@@ -48,6 +48,11 @@ function getRandomQuote() {
     return quotes[randNum];
 }
 
+// returns a random value between and including 0 - 255
+function randColor() {
+    return Math.floor(Math.random() * 256);
+}
+
 // function to print a random quote to the document
 // select random quote, create HTML string, display HTML to the page
 // if citation or year is missing, don't add respective value to the HTML
@@ -69,4 +74,12 @@ function printQuote() {
 
     // display on web page
     document.getElementById('quote-box').innerHTML = quoteHTML;
+
+    // change the background color to a random color
+    randRGB = "rgb(" + randColor() + "," + randColor() + "," + randColor() + ")";
+    document.body.style.backgroundColor = randRGB;
 }
+
+// at intervals of 30 seconds (= 30000 milliseconds), change the quote and
+// background color
+var intervalID = window.setInterval(printQuote, 30000);
