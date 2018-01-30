@@ -1,3 +1,10 @@
+// Treehouse Techdegree Project 1 - Random Quote Generator
+
+// Submission by Ronald van der Bergh
+// Attempt at extra credit (background color changes with quote, 30 seconds 
+// automatic quote change, extra properties in object )
+
+
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
