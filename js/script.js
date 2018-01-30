@@ -33,7 +33,7 @@ var quotes = [{
     },
     {
         quote: 'I have thought too much to stoop to action.',
-        source: 'Philippe Auguste Villiers De L\'Isle-Adam',
+        source: 'Philippe Auguste Villiers',
         citation: 'Axel',
         year: '1890',
         bartlettPage: '780'
