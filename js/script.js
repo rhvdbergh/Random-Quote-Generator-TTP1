@@ -44,7 +44,41 @@ var quotes = [{
         citation: 'Axel',
         year: '1890',
         bartlettPage: '780'
+    },
+    {
+        quote: 'Punctuality is the politeness of kings.',
+        source: 'Louis XVIII',
+        citation: 'A favorite saying',
+        bartlettPage: '485'
+    },
+    {
+        quote: 'The best of men cannot suspend their fate: the good die early, and the bad die late.',
+        source: 'Daniel Defoe',
+        citation: 'Character of the Late Dr. S. Annesley',
+        year: '1715',
+        bartlettPage: '385'
+    },
+    {
+        quote: 'If your descent is from heroic sires, [s]how in your life a remnant of their fires.',
+        source: 'Nicolas Boileau-Despréaux',
+        citation: 'Satire 5, l. 43',
+        bartlettPage: '377'
+    },
+    {
+        quote: 'To insure peace of mind ignore the rules and regulations.',
+        source: 'George Ade',
+        citation: 'Forty Modern Fables: The Crustacean',
+        year: '1901',
+        bartlettPage: '886'
+    },
+    {
+        quote: 'You can tell the ideals of a nation by its advertisements.',
+        source: 'Norman Douglas',
+        citation: 'South Wind',
+        year: '1917',
+        bartlettPage: '894'
     }
+
 ];
 
 // set inital timer to run at intervals of 30 seconds (= 30000 milliseconds)
