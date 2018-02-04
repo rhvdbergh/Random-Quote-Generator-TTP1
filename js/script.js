@@ -47,6 +47,10 @@ var quotes = [{
     }
 ];
 
+// set inital timer to run at intervals of 30 seconds (= 30000 milliseconds)
+// to change the quote and background color
+var timer = window.setInterval(printQuote, 30000);
+
 // function to select and return quote object randomly from quotes array 
 function getRandomQuote() {
     // quotes array's index is length - 1, so Math.floor * quotes.length ensures 
@@ -85,8 +89,10 @@ function printQuote() {
     // change the background color to a random color
     randRGB = "rgb(" + randColor() + "," + randColor() + "," + randColor() + ")";
     document.body.style.backgroundColor = randRGB;
-}
 
-// at intervals of 30 seconds (= 30000 milliseconds), change the quote and
-// background color
-var intervalID = window.setInterval(printQuote, 30000);
+    // clear previous timer to make sure that this quote displays for 30 seconds
+    clearInterval(timer);
+
+    // set new timer to change quote and background color 
+    timer = window.setInterval(printQuote, 30000);
+}
